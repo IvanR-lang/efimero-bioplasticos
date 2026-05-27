@@ -134,6 +134,7 @@
             gap: 2.5rem;
         }
 
+        /* Reutilizamos los estilos de tarjeta para la nueva sección */
         .tarjeta {
             background-color: var(--blanco);
             border: 1px solid #eee;
@@ -163,8 +164,18 @@
 
         .tarjeta h3 {
             color: var(--verde-oscuro);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             font-size: 1.4rem;
+        }
+
+        /* Estilo específico para los roles de los integrantes */
+        .tarjeta h4 {
+            color: var(--verde-claro);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .video-container {
@@ -267,7 +278,6 @@
             border-radius: 0 0 10px 10px;
         }
 
-        /* Preguntas Frecuentes (FAQ) Estilos Acordeón */
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
@@ -324,6 +334,13 @@
             max-height: 200px;
             padding: 1.25rem 1.5rem;
             border-top-width: 1px;
+        }
+
+        /* NUEVO: Distribución para la sección de los 5 integrantes */
+        .grid-equipo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
         }
 
         .cta-section {
@@ -390,7 +407,7 @@
         <div class="features-badges">
             <span class="badge">100% Biodegradable</span>
             <span class="badge">Compostable</span>
-            <span class="badge">Seguro y No Tóxico</span>
+            <span class="badge">Seguro y No Tónico</span>
             <span class="badge">Economía Circular</span>
         </div>
     </section>
@@ -469,6 +486,48 @@
                 <div class="faq-respuesta">
                     Somos un equipo de estudiantes emprendedores. Al observar el uso excesivo de vasos desechables de un solo uso dentro de nuestra comunidad escolar y los residuos generados en el Valle de Toluca, decidimos proponer una solución realista que reduzca la contaminación ambiental.
                 </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="seccion" style="background-color: #fafafa;">
+        <h2 class="titulo-seccion">El Equipo Detrás del Cambio</h2>
+        <div class="grid-equipo">
+            
+            <div class="tarjeta">
+                <div class="tarjeta-icono">👨‍com</div>
+                <h3>Erick Ivan Cortes Reyes</h3>
+                <h4>Estrategia Comercial</h4>
+                <p>Coordinación integral del proyecto, planeación del modelo de negocios y gestión de canales de distribución[cite: 12, 17, 44].</p>
+            </div>
+
+            <div class="tarjeta">
+                <div class="tarjeta-icono">👨‍🔧</div>
+                <h3>Emmanuel Corral Vallejo</h3>
+                <h4>Control de Calidad</h4>
+                <p>Supervisión del proceso de producción, cuidado de la mezcla de bioplástico y resistencia de los vasos[cite: 12, 93, 95].</p>
+            </div>
+
+            <div class="tarjeta">
+                <div class="tarjeta-icono">👩‍💼</div>
+                <h3>Fabiola Sarai Delgado Alonso</h3>
+                <h4>Gestión Financiera</h4>
+                <p>Administración del presupuesto del equipo, análisis de costos de materiales y balance de utilidades[cite: 12, 66, 97].</p>
+            </div>
+
+            <div class="tarjeta">
+                <div class="tarjeta-icono">👨‍🎨</div>
+                <h3>Alan Josue Escamilla Morales</h3>
+                <h4>Identidad Creativa</h4>
+                <p>Desarrollo de la imagen de marca, diseño del logotipo del ajolote, slogan y comunicación digital[cite: 12, 187, 227].</p>
+            </div>
+
+            <div class="tarjeta">
+                <div class="tarjeta-icono">👨‍🤝‍👨</div>
+                <h3>Eduardo Reyes Fabian</h3>
+                <h4>Relaciones Públicas</h4>
+                <p>Logística externa, vinculación con pequeños negocios y atención directa a los aliados comerciales[cite: 12, 46, 102].</p>
             </div>
 
         </div>
