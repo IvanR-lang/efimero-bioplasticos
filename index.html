@@ -204,17 +204,32 @@
             margin-bottom: 0.5rem;
         }
 
-        .video-container {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            position: relative;
-            padding-top: 56.25%;
-            margin: 2.5rem 0;
+        /* Contenedor para el código QR */
+        .qr-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border: 1px dashed var(--verde-claro);
+            border-radius: 8px;
+            max-width: 280px;
+            text-align: center;
         }
 
-        .video-container iframe {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+        .qr-imagen {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+
+        .qr-leyenda {
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 600;
         }
 
         .simulador-container {
@@ -273,7 +288,7 @@
             <a href="#desarrollo-emprendedor">Nuestra Propuesta</a>
             <a href="#artes">Identidad y Stand</a>
             <a href="#artes-concepto">Concepto de Marca</a>
-            <a href="#ciudadania-del-mundo-globalizado">Compromiso Global</a>
+            <a href="#ciudadania-del-mundo-globalizado">El cambio comienza contigo</a>
             <a href="#estadistica">Análisis de Costos</a>
             <a href="#psicologia">El Consumidor</a>
             <a href="#sociologia">Impacto Social</a>
@@ -380,7 +395,7 @@
                 </div>
                 <div class="tarjeta tarjeta-concepto">
                     <h3>⚫ Contraste Minimalista</h3>
-                    <p>La simplicidad del blanco y negro proyecta solidez, seriedad and elegancia en nuestras prácticas responsables, eliminando distractores visuales para centrar la atención en la esencia pura del producto.</p>
+                    <p>La simplicidad del blanco y negro proyecta solidez, seriedad y elegancia en nuestras prácticas responsables, eliminando distractores visuales para centrar la atención en la esencia pura del producto.</p>
                 </div>
             </div>
         </section>
@@ -398,8 +413,9 @@
                 En conjunto, la participación de la ciudadanía global demuestra que las pequeñas acciones individuales pueden generar un impacto positivo en la protección del medio ambiente y en la construcción de un futuro más sostenible.
             </p>
             
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/aN1JtKlmfpM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="qr-container">
+                <img src="./url_qrcodecreator.com_12_29_08.png" alt="Código QR de Campaña Ambiental" class="qr-imagen">
+                <div class="qr-leyenda">Escanea para sumarte a la iniciativa ecológica</div>
             </div>
         </section>
 
