@@ -263,6 +263,41 @@
             transform: scale(1.02);
         }
 
+        /* Diseño estructurado para las imágenes de Estadística */
+        .estadistica-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .estadistica-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .estadistica-imagen {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+
+        .estadistica-subtitulo {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--gris-oscuro);
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
+
         /* Estructura para bloques de contenido con texto y QR alineados */
         .modulo-psico-block {
             display: flex;
@@ -380,7 +415,7 @@
             <a href="#ciudadania-del-mundo-globalizado">El cambio comienza contigo</a>
             <a href="#estadistica">Herramientas de Análisis para la Toma de Decisiones</a>
             <a href="#psicologia">Conductas que cambian el mundo</a>
-            <a href="#sociologia">Impacto Social</a>
+            <a href="#sociologia">Impacto social del plástico</a>
         </nav>
     </aside>
 
@@ -403,7 +438,7 @@
                 <div class="tarjeta tarjeta-corporativa">
                     <h3>👁️ Visión</h3>
                     <p class="parrafo-texto" style="font-size: 0.95rem; margin-bottom: 0;">
-                        Consolidarse como una marca líder y un referente de innovación en el sector de empaques sostenibles a nivel regional, promoviendo de manera responsable la erradicación de plásticos convencionales y transformando la cultura de consumo hacia un modelo circular y respectful con la naturaleza.
+                        Consolidarse como una marca líder y un referente de innovación en el sector de empaques sostenibles a nivel regional, promoviendo de manera responsable la erradicación de plásticos convencionales y transformando la cultura de consumo hacia un modelo circular y respetuoso con la naturaleza.
                     </p>
                 </div>
             </div>
@@ -504,7 +539,7 @@
                 Toda la ciudadanía contribuye a la reducción de la contaminación por plásticos convencionales mediante acciones de consumo responsable y conciencia ambiental. Cada vez más personas optan por utilizar productos reutilizables y biodegradables, como bolsas de tela, termos y vasos ecológicos, disminuyendo así la generación de residuos plásticos.
             </p>
             <p class="parrafo-texto">
-                Además, las campañas en redes sociales, movimientos ambientales and programas de reciclaje han ayudado a informar y sensibilizar a la población sobre los daños que el plástico causa en los ecosistemas y en la salud. Gracias a esta participación ciudadana, muchas empresas y gobiernos han implementado medidas como la prohibición de ciertos plásticos y el impulso de alternativas sostenibles.
+                Además, las campañas en redes sociales, movimientos ambientales y programas de reciclaje han ayudado a informar y sensibilizar a la población sobre los daños que el plástico causa en los ecosistemas y en la salud. Gracias a esta participación ciudadana, muchas empresas y gobiernos han implementado medidas como la prohibición de ciertos plásticos y el impulso de alternativas sostenibles.
             </p>
             <p class="parrafo-texto">
                 En conjunto, la participación de la ciudadanía global demuestra que las pequeñas acciones individuales pueden generar un impacto positivo en la protección del medio ambiente y en la construcción de un futuro más sostenible.
@@ -524,6 +559,21 @@
             <p class="parrafo-texto">
                 En el proyecto “Efímero”, enfocado en la elaboración de vasos biodegradables, la aplicación de estas técnicas matemáticas ayuda a comprender cómo optimizar procesos dentro de la microempresa, desde la distribución de productos y asignación de roles hasta la selección de muestras y estrategias de difusión. De esta manera, la estadística no solo facilita el análisis de diferentes escenarios, sino que también contribuye al desarrollo de soluciones innovadoras y sostenibles dentro del entorno empresarial.
             </p>
+
+            <div class="estadistica-grid">
+                <div class="estadistica-item">
+                    <img src="./permutacion.jpeg" alt="Fórmula de Permutación" class="estadistica-imagen">
+                    <span class="estadistica-subtitulo">1. Permutación</span>
+                </div>
+                <div class="estadistica-item">
+                    <img src="./remplazo.jpeg" alt="Fórmula de Permutación con Reemplazo" class="estadistica-imagen">
+                    <span class="estadistica-subtitulo">2. Permutaciones con reemplazo</span>
+                </div>
+                <div class="estadistica-item">
+                    <img src="./combinaciones.jpeg" alt="Fórmula de Combinación sin Repetición" class="estadistica-imagen">
+                    <span class="estadistica-subtitulo">3. Combinaciones sin repetición</span>
+                </div>
+            </div>
         </section>
 
         <section id="psicologia" class="seccion-bloque">
@@ -550,7 +600,7 @@
                         Las normas sociales, los factores culturales y la conducta individual y grupal influyen directamente en la forma en que las personas consumen y utilizan productos de plástico. Durante muchos años, el uso de vasos, bolsas y envases desechables se volvió una práctica común dentro de la sociedad debido a la comodidad y rapidez que ofrecen. Sin embargo, estas costumbres han generado un gran impacto ambiental, provocando contaminación en mares, ríos y ecosistemas.
                     </p>
                     <p class="parrafo-texto">
-                        En este contexto, los plásticos biodegradables surgen como una alternativa más sostenible que busca reducir el daño al medio ambiente. La aceptación y el uso de estos productos dependen en gran parte de la conciencia social, la educación ambiental y la influencia de grupos como la familia, la escuela y la comunidad. Cuando las personas observan conductas responsables en su entorno, es más probable que adopten hábitos ecológicos y participen en acciones para disminuir la contaminación. De esta manera, la conducta humana y las normas culturales tienen un papel fundamental en la construcción de una sociedad más consciente y comprometida con el cuidado del planeta.
+                        En este contexto, los plásticos biodegradables surgen como una alternativa más sostenible que busca reducir el daño al medio ambiente. La aceptación y el uso de estos productos dependen en gran parte de la conciencia social, la educación ambiental and la influencia de grupos como la familia, la escuela y la comunidad. Cuando las personas observan conductas responsables en su entorno, es más probable que adopten hábitos ecológicos y participen en acciones para disminuir la contaminación. De esta manera, la conducta humana y las normas culturales tienen un papel fundamental en la construcción de una sociedad más consciente y comprometida con el cuidado del planeta.
                     </p>
                 </div>
                 <div class="qr-individual-container">
@@ -561,12 +611,15 @@
         </section>
 
         <section id="sociologia" class="seccion-bloque">
-            <h2 class="titulo-seccion">Impacto Social</h2>
+            <h2 class="titulo-seccion">Impacto social del plástico</h2>
             <p class="parrafo-texto">
-                Desde una perspectiva estructural, el proyecto aborda el uso de plásticos como un fenómeno colectivo arraigado en la cultura de consumo de la comunidad escolar. La gran acumulación de residuos sólidos en el Valle de Toluca es resultado de dinámicas sociales masivas que priorizan la inmediatez sobre la responsabilidad ambiental.
+                El uso excesivo de plásticos se ha convertido en una problemática que afecta tanto al medio ambiente como a la sociedad. Debido a la comodidad y facilidad que ofrecen, productos como vasos, bolsas y envases desechables forman parte de la vida cotidiana de millones de personas. Sin embargo, esta práctica ha provocado un aumento considerable en la contaminación de calles, ríos, mares y áreas naturales, afectando la calidad de vida y el equilibrio de los ecosistemas.
             </p>
             <p class="parrafo-texto">
-                Al implementar canales de interacción directa y redes sociales, estimulamos la creación de una comunidad estudiantil más consciente. Buscamos que la venta cara a cara y la retroalimentación inmediata transformen la presión social en un factor positivo, normalizando el uso de bioplásticos y construyendo una identidad colectiva basada en valores sustentables.
+                La acumulación de residuos plásticos genera problemas en muchas comunidades, ya que los desechos tardan años en degradarse y dificultan el manejo adecuado de la basura. Esta situación demuestra la importancia de crear una mayor conciencia sobre nuestros hábitos de consumo y las consecuencias que tienen en el entorno.
+            </p>
+            <p class="parrafo-texto">
+                Ante esta problemática, los vasos biodegradables representan una alternativa sostenible que busca reducir el impacto ambiental y promover prácticas más responsables. A través de pequeños cambios en nuestras decisiones diarias, es posible contribuir al cuidado del planeta y fomentar una cultura basada en la responsabilidad ambiental y el bienestar colectivo.
             </p>
         </section>
 
