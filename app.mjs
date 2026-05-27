@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
         actualizarSimulador(0);
     }
 
-    // 2. DETECTAR SECCIÓN ACTIVA Y CAMBIAR EL HASHTAG DE LA URL POR LA MATERIA (OPTIMIZADO)
+    // 2. DETECTAR SECCIÓN ACTIVA Y CAMBIAR EL HASHTAG DE LA URL POR LA MATERIA
     const secciones = document.querySelectorAll('.seccion-bloque');
     const enlacesMenu = document.querySelectorAll('nav a');
     let ultimaSeccionActiva = "";
@@ -60,7 +60,6 @@ window.addEventListener('DOMContentLoaded', () => {
         
         secciones.forEach(seccion => {
             const seccionTop = seccion.offsetTop;
-            // window.scrollY reemplaza de forma óptima a pageYOffset
             if (window.scrollY >= seccionTop - 200) {
                 seccionActual = seccion.getAttribute('id');
             }
@@ -76,7 +75,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Reemplaza de forma silenciosa y precisa la URL sin recargar
             history.replaceState(null, null, `#${seccionActual}`);
         }
     });
