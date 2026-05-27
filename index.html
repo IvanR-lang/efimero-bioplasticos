@@ -203,6 +203,16 @@
             object-fit: cover;
         }
 
+        /* Contenedor Premium para el Visor PDF */
+        .pdf-visor-container {
+            margin: 2rem auto;
+            max-width: 850px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            border: 1px solid #e2e8f0;
+        }
+
         /* Estilos para el contenedor y tamaño del logo */
         .logo-concepto-container {
             display: flex;
@@ -397,6 +407,7 @@
             main { margin-left: 0; padding: 2rem 1.5rem; }
             .modulo-psico-block { flex-direction: column; gap: 1.5rem; align-items: center; }
             .qr-individual-container { width: 100%; max-width: 280px; }
+            .pdf-visor-container iframe { height: 450px; }
         }
     </style>
 </head>
@@ -416,6 +427,7 @@
             <a href="#estadistica">Herramientas de Análisis para la Toma de Decisiones</a>
             <a href="#psicologia">Conductas que cambian el mundo</a>
             <a href="#sociologia">Impacto social del plástico</a>
+            <a href="#morfologia">Morfología</a>
             <a href="#metodologia-de-la-investigacion">El futuro se construye hoy</a>
         </nav>
     </aside>
@@ -622,6 +634,17 @@
             <p class="parrafo-texto">
                 Ante esta problemática, los vasos biodegradables representan una alternativa sostenible que busca reducir el impacto ambiental y promover prácticas más responsables. A través de pequeños cambios en nuestras decisiones diarias, es posible contribuir al cuidado del planeta y fomentar una cultura basada en la responsabilidad ambiental y el bienestar colectivo.
             </p>
+        </section>
+
+        <section id="morfologia" class="seccion-bloque">
+            <h2 class="titulo-seccion">Morfología</h2>
+            <p class="parrafo-texto">
+                A continuación se presenta el reporte detallado que describe la estructura, diseño y características de los productos desarrollados en el proyecto. Este documento analiza la morfología de nuestras soluciones sostenibles desde una perspectiva técnica y funcional:
+            </p>
+            
+            <div class="pdf-visor-container">
+                <iframe src="./documento.pdf" width="100%" height="650px" style="border: none; display: block;"></iframe>
+            </div>
         </section>
 
         <section id="metodologia-de-la-investigacion" class="seccion-bloque">
