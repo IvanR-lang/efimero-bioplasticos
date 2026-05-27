@@ -222,7 +222,30 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Estructura para bloques de contenido con texto y QR alineados de forma profesional */
+        /* Contenedor adaptado para la imagen del stand físico */
+        .stand-imagen-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2.5rem auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            max-width: 600px;
+        }
+
+        .stand-imagen {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .stand-imagen:hover {
+            transform: scale(1.02);
+        }
+
+        /* Estructura para bloques de contenido con texto y QR alineados */
         .modulo-psico-block {
             display: flex;
             align-items: center;
@@ -235,7 +258,6 @@
             flex: 1;
         }
 
-        /* Contenedor adaptado para los QRs individuales */
         .qr-individual-container {
             display: flex;
             flex-direction: column;
@@ -384,7 +406,7 @@
         <section id="desarrollo-emprendedor" class="seccion-bloque">
             <h2 class="titulo-seccion">Nuestra Propuesta</h2>
             <p class="parrafo-texto">
-                Nuestra propuesta de valor consiste en ofrecer vasos biodegradables elaborados de forma artesanal a base de materiales orgánicos accesibles: grenetina, glicerina vegetal pura y agua. Nos enfocamos en estudiantes y pequeños vendedores de bebidas ubicados dentro y alrededor del entorno escolar en el Valle de Toluca.
+                Nuestra propuesta de valor consiste en ofrecer vasos biodegradables de forma artesanal a base de materiales orgánicos accesibles: grenetina, glicerina vegetal pura y agua. Nos enfocamos en estudiantes y pequeños vendedores de bebidas ubicados dentro y alrededor del entorno escolar en el Valle de Toluca.
             </p>
 
             <div class="simulador-container">
@@ -420,6 +442,10 @@
             <p class="parrafo-texto">
                 La estética del proyecto se expresa a través del diseño de nuestra marca e infraestructura. Proponemos una experiencia física que destaca por un stand de concepto minimalista y ecológico, elaborado en maderas claras de tonos orgánicos combinados con una paleta cromática verde, blanca y beige, complementado con plantas colgantes que refuerzan el mensaje visual de frescura y pureza.
             </p>
+
+            <div class="stand-imagen-container">
+                <img src="./Stand-efimero.jpeg" alt="Estructura del Stand Físico Efímero" class="stand-imagen">
+            </div>
         </section>
 
         <section id="artes-concepto" class="seccion-bloque">
@@ -501,7 +527,7 @@
                         Las normas sociales, los factores culturales y la conducta individual y grupal influyen directamente en la forma en que las personas consumen y utilizan productos de plástico. Durante muchos años, el uso de vasos, bolsas y envases desechables se volvió una práctica común dentro de la sociedad debido a la comodidad y rapidez que ofrecen. Sin embargo, estas costumbres han generado un gran impacto ambiental, provocando contaminación en mares, ríos y ecosistemas.
                     </p>
                     <p class="parrafo-texto">
-                        En este contexto, los plásticos biodegradables surgen como una alternativa más sostenible que busca reducir el daño al medio ambiente. La aceptación y el uso de estos productos dependen en gran parte de la conciencia social, la educación ambiental y la influencia de grupos como la familia, la escuela y la comunidad. Cuando las personas observan conductas responsables en su entorno, es más probable que adoptten hábitos ecológicos y participen en acciones para disminuir la contaminación. De esta manera, la conducta humana y las normas culturales tienen un papel fundamental en la construcción de una sociedad más consciente y comprometida con el cuidado del planeta.
+                        En este contexto, los plásticos biodegradables surgen como una alternativa más sostenible que busca reducir el daño al medio ambiente. La aceptación y el uso de estos productos dependen en gran parte de la conciencia social, la educación ambiental y la influencia de grupos como la familia, la escuela y la comunidad. Cuando las personas observan conductas responsables en su entorno, es más probable que adopten hábitos ecológicos y participen en acciones para disminuir la contaminación. De esta manera, la conducta humana y las normas culturales tienen un papel fundamental en la construcción de una sociedad más consciente y comprometida con el cuidado del planeta.
                     </p>
                 </div>
                 <div class="qr-individual-container">
