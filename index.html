@@ -222,19 +222,20 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Contenedor para el código QR */
+        /* Estructura base para contenedores QR individuales */
         .qr-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin: 3rem auto;
             padding: 2rem;
             background-color: #ffffff;
             border: 1px dashed var(--verde-claro);
             border-radius: 8px;
-            max-width: 280px;
             text-align: center;
+            flex: 1;
+            min-width: 240px;
+            max-width: 280px;
         }
 
         .qr-imagen {
@@ -248,6 +249,16 @@
             font-size: 0.85rem;
             color: #666;
             font-weight: 600;
+        }
+
+        /* Distribución estética de doble QR en horizontal */
+        .qr-double-layout {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin: 3.5rem auto;
+            max-width: 650px;
         }
 
         .simulador-container {
@@ -431,7 +442,7 @@
                 En conjunto, la participación de la ciudadanía global demuestra que las pequeñas acciones individuales pueden generar un impacto positivo en la protección del medio ambiente y en la construcción de un futuro más sostenible.
             </p>
             
-            <div class="qr-container">
+            <div class="qr-container" style="margin: 3rem auto;">
                 <img src="./url_qrcodecreator.com_12_29_08.png" alt="Código QR de Campaña Ambiental" class="qr-imagen">
                 <div class="qr-leyenda">Escanea para sumarte a la iniciativa ecológica</div>
             </div>
@@ -449,12 +460,30 @@
 
         <section id="psicologia" class="seccion-bloque">
             <h2 class="titulo-seccion">Conductas que cambian el mundo</h2>
+            
             <p class="parrafo-texto">
                 La adolescencia es una etapa de cambios físicos, emocionales y sociales en la que las personas comienzan a formar su identidad, desarrollar valores y tomar decisiones más conscientes sobre su entorno. Desde la psicología, esta etapa es importante porque los adolescentes aprenden conductas, hábitos y formas de pensar que influirán en su vida futura. En este contexto, el uso y promoción de vasos desechables biodegradables se relaciona con el desarrollo de la responsabilidad social y ambiental, ya que fomenta una mayor conciencia sobre el cuidado del planeta y las consecuencias de nuestras acciones.
             </p>
             <p class="parrafo-texto">
                 Además, durante la adolescencia existe una gran influencia del entorno social, las tendencias y la necesidad de generar cambios positivos dentro de la comunidad. Por ello, proyectos sostenibles como los vasos biodegradables no solo representan una alternativa ecológica, sino también una oportunidad para que los jóvenes participen activamente en la construcción de hábitos responsables y en la promoción de una cultura ambiental más consciente. De esta manera, la psicología ayuda a comprender cómo las actitudes, emociones y comportamientos de los adolescentes pueden contribuir al desarrollo de soluciones sostenibles para la sociedad.
             </p>
+            <p class="parrafo-texto">
+                Las normas sociales, los factores culturales y la conducta individual y grupal influyen directamente en la forma en que las personas consumen y utilizan productos de plástico de un solo uso. Durante muchos años, el uso de vasos, bolsas y envases desechables se volvió una práctica común dentro de la sociedad debido a la comodidad y rapidez que ofrecen. Sin embargo, estas costumbres han generado un gran impacto ambiental, provocando contaminación en mares, ríos y ecosistemas.
+            </p>
+            <p class="parrafo-texto">
+                En este contexto, los plásticos biodegradables surgen como una alternativa más sostenible que busca reducir el daño al medio ambiente. La aceptación y el uso de estos productos dependen en gran parte de la conciencia social, la educación ambiental y la influencia de grupos como la familia, la escuela y la comunidad. Cuando las personas observan conductas responsables en su entorno, es más probable que adopten hábitos ecológicos y participen en acciones para disminuir la contaminación. De esta manera, la conducta humana y las normas culturales tienen un papel fundamental en la construcción de una sociedad más consciente y comprometida con el cuidado del planeta.
+            </p>
+
+            <div class="qr-double-layout">
+                <div class="qr-container">
+                    <img src="./qr_psicologia_m2.png" alt="Código QR Psicología Módulo 2" class="qr-imagen">
+                    <div class="qr-leyenda">Análisis del Consumidor<br>Módulo 2</div>
+                </div>
+                <div class="qr-container">
+                    <img src="./qr_psicologia_m4.png" alt="Código QR Psicología Módulo 4" class="qr-imagen">
+                    <div class="qr-leyenda">Estrategias de Conducta<br>Módulo 4</div>
+                </div>
+            </div>
         </section>
 
         <section id="sociologia" class="seccion-bloque">
