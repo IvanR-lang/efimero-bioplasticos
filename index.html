@@ -222,43 +222,60 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Estructura base para contenedores QR individuales */
+        /* Estructura para bloques de contenido con texto y QR alineados de forma profesional */
+        .modulo-psico-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .modulo-psico-texto {
+            flex: 1;
+        }
+
+        /* Contenedor adaptado para los QRs individuales */
+        .qr-individual-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            background-color: #ffffff;
+            border: 1px dashed var(--verde-claro);
+            border-radius: 8px;
+            text-align: center;
+            width: 240px;
+            flex-shrink: 0;
+        }
+
+        .qr-imagen {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 0.75rem;
+        }
+
+        .qr-leyenda {
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        /* Contenedor para el código QR de ciudadanía */
         .qr-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin: 3rem auto;
             padding: 2rem;
             background-color: #ffffff;
             border: 1px dashed var(--verde-claro);
             border-radius: 8px;
-            text-align: center;
-            flex: 1;
-            min-width: 240px;
             max-width: 280px;
-        }
-
-        .qr-imagen {
-            width: 200px;
-            height: 200px;
-            object-fit: contain;
-            margin-bottom: 1rem;
-        }
-
-        .qr-leyenda {
-            font-size: 0.85rem;
-            color: #666;
-            font-weight: 600;
-        }
-
-        /* Distribución estética de doble QR en horizontal */
-        .qr-double-layout {
-            display: flex;
-            justify-content: center;
-            gap: 2.5rem;
-            flex-wrap: wrap;
-            margin: 3.5rem auto;
-            max-width: 650px;
+            text-align: center;
         }
 
         .simulador-container {
@@ -302,6 +319,8 @@
             body { flex-direction: column; }
             aside { width: 100%; position: relative; height: auto; padding: 1.5rem; overflow-y: visible; }
             main { margin-left: 0; padding: 2rem 1.5rem; }
+            .modulo-psico-block { flex-direction: column; gap: 1.5rem; align-items: center; }
+            .qr-individual-container { width: 100%; max-width: 280px; }
         }
     </style>
 </head>
@@ -337,7 +356,7 @@
                 <div class="tarjeta tarjeta-corporativa">
                     <h3>🎯 Misión</h3>
                     <p class="parrafo-texto" style="font-size: 0.95rem; margin-bottom: 0;">
-                        Desarrollar y comercializar soluciones de empaque biodegradables de alta calidad, asumiendo un compromiso firme con la preservación del medio ambiente a través de la sustitución de plásticos de un solo uso, disminuyendo la huella ecológica y generando valor social en el entorno.
+                        Desarrollar y comercializar soluciones de empaque biodegradables de alta calidad, asumiendo un compromiso firme con la preservación del medio ambiente a través de la sustitución de plásticos convencionales, disminuyendo la huella ecológica y generando valor social en el entorno.
                     </p>
                 </div>
                 <div class="tarjeta tarjeta-corporativa">
@@ -365,7 +384,7 @@
         <section id="desarrollo-emprendedor" class="seccion-bloque">
             <h2 class="titulo-seccion">Nuestra Propuesta</h2>
             <p class="parrafo-texto">
-                Nuestra propuesta de valor consiste en ofrecer vasos biodegradables de un solo uso elaborados de forma semiartesanal a base de materiales orgánicos accesibles: grenetina, glicerina vegetal pura y agua. Nos enfocamos en estudiantes y pequeños vendedores de bebidas ubicados dentro y alrededor del entorno escolar en el Valle de Toluca.
+                Nuestra propuesta de valor consiste en ofrecer vasos biodegradables elaborados de forma artesanal a base de materiales orgánicos accesibles: grenetina, glicerina vegetal pura y agua. Nos enfocamos en estudiantes y pequeños vendedores de bebidas ubicados dentro y alrededor del entorno escolar en el Valle de Toluca.
             </p>
 
             <div class="simulador-container">
@@ -433,10 +452,10 @@
             <h2 class="titulo-seccion">El cambio comienza contigo</h2>
             
             <p class="parrafo-texto">
-                Toda la ciudadanía contribuye a la reducción de la contaminación por plásticos de un solo uso mediante acciones de consumo responsable y conciencia ambiental. Cada vez más personas optan por utilizar productos reutilizables y biodegradables, como bolsas de tela, termos y vasos ecológicos, disminuyendo así la generación de residuos plásticos.
+                Toda la ciudadanía contribuye a la reducción de la contaminación por plásticos convencionales mediante acciones de consumo responsable y conciencia ambiental. Cada vez más personas optan por utilizar productos reutilizables y biodegradables, como bolsas de tela, termos y vasos ecológicos, disminuyendo así la generación de residuos plásticos.
             </p>
             <p class="parrafo-texto">
-                Además, las campañas en redes sociales, movimientos ambientales y programas de reciclaje han ayudado a informar y sensibilizar a la población sobre los daños que el plástico causa en los ecosistemas y en la salud. Gracias a esta participación ciudadana, muchas empresas y gobiernos han implementado medidas como la prohibición de ciertos plásticos desechables y el impulso de alternativas sostenibles.
+                Además, las campañas en redes sociales, movimientos ambientales y programas de reciclaje han ayudado a informar y sensibilizar a la población sobre los daños que el plástico causa en los ecosistemas y en la salud. Gracias a esta participación ciudadana, muchas empresas y gobiernos han implementado medidas como la prohibición de ciertos plásticos y el impulso de alternativas sostenibles.
             </p>
             <p class="parrafo-texto">
                 En conjunto, la participación de la ciudadanía global demuestra que las pequeñas acciones individuales pueden generar un impacto positivo en la protección del medio ambiente y en la construcción de un futuro más sostenible.
@@ -461,25 +480,31 @@
         <section id="psicologia" class="seccion-bloque">
             <h2 class="titulo-seccion">Conductas que cambian el mundo</h2>
             
-            <p class="parrafo-texto">
-                La adolescencia es una etapa de cambios físicos, emocionales y sociales en la que las personas comienzan a formar su identidad, desarrollar valores y tomar decisiones más conscientes sobre su entorno. Desde la psicología, esta etapa es importante porque los adolescentes aprenden conductas, hábitos y formas de pensar que influirán en su vida futura. En este contexto, el uso y promoción de vasos desechables biodegradables se relaciona con el desarrollo de la responsabilidad social y ambiental, ya que fomenta una mayor conciencia sobre el cuidado del planeta y las consecuencias de nuestras acciones.
-            </p>
-            <p class="parrafo-texto">
-                Además, durante la adolescencia existe una gran influencia del entorno social, las tendencias y la necesidad de generar cambios positivos dentro de la comunidad. Por ello, proyectos sostenibles como los vasos biodegradables no solo representan una alternativa ecológica, sino también una oportunidad para que los jóvenes participen activamente en la construcción de hábitos responsables y en la promoción de una cultura ambiental más consciente. De esta manera, la psicología ayuda a comprender cómo las actitudes, emociones y comportamientos de los adolescentes pueden contribuir al desarrollo de soluciones sostenibles para la sociedad.
-            </p>
-            <p class="parrafo-texto">
-                Las normas sociales, los factores culturales y la conducta individual y grupal influyen directamente en la forma en que las personas consumen y utilizan productos de plástico de un solo uso. Durante muchos años, el uso de vasos, bolsas y envases desechables se volvió una práctica común dentro de la sociedad debido a la comodidad y rapidez que ofrecen. Sin embargo, estas costumbres han generado un gran impacto ambiental, provocando contaminación en mares, ríos y ecosistemas.
-            </p>
-            <p class="parrafo-texto">
-                En este contexto, los plásticos biodegradables surgen como una alternativa más sostenible que busca reducir el daño al medio ambiente. La aceptación y el uso de estos productos dependen en gran parte de la conciencia social, la educación ambiental y la influencia de grupos como la familia, la escuela y la comunidad. Cuando las personas observan conductas responsables en su entorno, es más probable que adopten hábitos ecológicos y participen en acciones para disminuir la contaminación. De esta manera, la conducta humana y las normas culturales tienen un papel fundamental en la construcción de una sociedad más consciente y comprometida con el cuidado del planeta.
-            </p>
-
-            <div class="qr-double-layout">
-                <div class="qr-container">
+            <div class="modulo-psico-block">
+                <div class="modulo-psico-texto">
+                    <p class="parrafo-texto">
+                        La adolescencia es una etapa de cambios físicos, emocionales y sociales en la que las personas comienzan a formar su identidad, desarrollar valores y tomar decisiones más conscientes sobre su entorno. Desde la psicología, esta etapa es importante porque los adolescentes aprenden conductas, hábitos y formas de pensar que influirán en su vida futura. En este contexto, el uso y promoción de vasos desechables biodegradables se relaciona con el desarrollo de la responsabilidad social y ambiental, ya que fomenta una mayor conciencia sobre el cuidado del planeta y las consecuencias de nuestras acciones.
+                    </p>
+                    <p class="parrafo-texto">
+                        Además, durante la adolescencia existe una gran influencia del entorno social, las tendencias y la necesidad de generar cambios positivos dentro de la comunidad. Por ello, proyectos sostenibles como los vasos biodegradables no solo representan una alternativa ecológica, sino también una oportunidad para que los jóvenes participen activamente en la construcción de hábitos responsables y en la promoción de una cultura ambiental más consciente. De esta manera, la psicología ayuda a comprender cómo las actitudes, emociones y comportamientos de los adolescentes pueden contribuir al desarrollo de soluciones sostenibles para la sociedad.
+                    </p>
+                </div>
+                <div class="qr-individual-container">
                     <img src="./qr_psicologia_m2.png" alt="Código QR Psicología Módulo 2" class="qr-imagen">
                     <div class="qr-leyenda">Análisis del Consumidor<br>Módulo 2</div>
                 </div>
-                <div class="qr-container">
+            </div>
+
+            <div class="modulo-psico-block">
+                <div class="modulo-psico-texto">
+                    <p class="parrafo-texto">
+                        Las normas sociales, los factores culturales y la conducta individual y grupal influyen directamente en la forma en que las personas consumen y utilizan productos de plástico. Durante muchos años, el uso de vasos, bolsas y envases desechables se volvió una práctica común dentro de la sociedad debido a la comodidad y rapidez que ofrecen. Sin embargo, estas costumbres han generado un gran impacto ambiental, provocando contaminación en mares, ríos y ecosistemas.
+                    </p>
+                    <p class="parrafo-texto">
+                        En este contexto, los plásticos biodegradables surgen como una alternativa más sostenible que busca reducir el daño al medio ambiente. La aceptación y el uso de estos productos dependen en gran parte de la conciencia social, la educación ambiental y la influencia de grupos como la familia, la escuela y la comunidad. Cuando las personas observan conductas responsables en su entorno, es más probable que adoptten hábitos ecológicos y participen en acciones para disminuir la contaminación. De esta manera, la conducta humana y las normas culturales tienen un papel fundamental en la construcción de una sociedad más consciente y comprometida con el cuidado del planeta.
+                    </p>
+                </div>
+                <div class="qr-individual-container">
                     <img src="./qr_psicologia_m4.png" alt="Código QR Psicología Módulo 4" class="qr-imagen">
                     <div class="qr-leyenda">Estrategias de Conducta<br>Módulo 4</div>
                 </div>
