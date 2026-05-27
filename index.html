@@ -29,7 +29,7 @@
             min-height: 100vh;
         }
 
-        /* BARRA LATERAL IZQUIERDA */
+        /* BARRA LATERAL IZQUIERDA CON SCROLL OPTIMIZADO */
         aside {
             width: var(--sidebar-width);
             background-color: #fafafa;
@@ -43,6 +43,23 @@
             flex-direction: column;
             gap: 2rem;
             z-index: 100;
+            /* Solución al problema: permite scroll vertical interno si el contenido excede la pantalla */
+            overflow-y: auto; 
+        }
+
+        /* Personalización estética del scrollbar del menú (Chrome, Safari y Edge) */
+        aside::-webkit-scrollbar {
+            width: 5px;
+        }
+        aside::-webkit-scrollbar-track {
+            background: #fafafa;
+        }
+        aside::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        aside::-webkit-scrollbar-thumb:hover {
+            background: var(--verde-claro);
         }
 
         .sidebar-brand {
@@ -53,6 +70,7 @@
             text-align: center;
             padding-bottom: 1.5rem;
             border-bottom: 1px solid #e2e8f0;
+            flex-shrink: 0; /* Evita que el logo se aplaste al scrollear el menú */
         }
 
         .sidebar-brand img {
@@ -272,7 +290,7 @@
 
         @media (max-width: 768px) {
             body { flex-direction: column; }
-            aside { width: 100%; position: relative; height: auto; padding: 1.5rem; }
+            aside { width: 100%; position: relative; height: auto; padding: 1.5rem; overflow-y: visible; }
             main { margin-left: 0; padding: 2rem 1.5rem; }
         }
     </style>
