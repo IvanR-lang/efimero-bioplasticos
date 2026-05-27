@@ -50,25 +50,34 @@ window.addEventListener('DOMContentLoaded', () => {
         actualizarSimulador(0);
     }
 
-    // 2. DETECTAR SECCIÓN ACTIVA AL SCROLLEAR (Con la pestaña Concepto integrada)
+    // 2. DETECTAR SECCIÓN ACTIVA Y CAMBIAR EL HASHTAG DE LA URL POR LA MATERIA (OPTIMIZADO)
     const secciones = document.querySelectorAll('.seccion-bloque');
     const enlacesMenu = document.querySelectorAll('nav a');
+    let ultimaSeccionActiva = "";
 
     window.addEventListener('scroll', () => {
         let seccionActual = "";
         
         secciones.forEach(seccion => {
             const seccionTop = seccion.offsetTop;
-            if (pageYOffset >= seccionTop - 160) {
+            // window.scrollY reemplaza de forma óptima a pageYOffset
+            if (window.scrollY >= seccionTop - 200) {
                 seccionActual = seccion.getAttribute('id');
             }
         });
 
-        enlacesMenu.forEach(enlace => {
-            enlace.classList.remove('active');
-            if (enlace.getAttribute('href') === `#${seccionActual}`) {
-                enlace.classList.add('active');
-            }
-        });
+        if (seccionActual && seccionActual !== ultimaSeccionActiva) {
+            ultimaSeccionActiva = seccionActual;
+            
+            enlacesMenu.forEach(enlace => {
+                enlace.classList.remove('active');
+                if (enlace.getAttribute('href') === `#${seccionActual}`) {
+                    enlace.classList.add('active');
+                }
+            });
+
+            // Reemplaza de forma silenciosa y precisa la URL sin recargar
+            history.replaceState(null, null, `#${seccionActual}`);
+        }
     });
 });
