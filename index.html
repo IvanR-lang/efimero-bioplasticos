@@ -340,6 +340,68 @@
             gap: 2rem;
         }
 
+        /* NUEVO: Estilos para la sección de "Conoce el Logo" */
+        .contenedor-logo-concepto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .columna-logo-visual {
+            flex: 1;
+            min-width: 280px;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .columna-logo-visual img {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.08));
+            animation: flotar 4s ease-in-out infinite;
+        }
+
+        @keyframes flotar {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .columna-logo-texto {
+            flex: 1.5;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .tarjeta-concepto {
+            background-color: var(--blanco);
+            border-left: 4px stroke var(--verde-oscuro);
+            border: 1px solid #eee;
+            border-left: 4px solid var(--verde-oscuro);
+            padding: 1.5rem;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 0.6s ease-out;
+        }
+
+        .tarjeta-concepto.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .tarjeta-concepto h3 {
+            color: var(--verde-oscuro);
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+        }
+
         .cta-section {
             background-color: var(--verde-oscuro);
             color: var(--blanco);
@@ -522,11 +584,40 @@
         </div>
     </section>
 
+    <section class="seccion">
+        <h2 class="titulo-seccion">Identidad Efímero</h2>
+        <div class="contenedor-logo-concepto">
+            
+            <div class="columna-logo-visual">
+                <img src="./logo-ajolote-removebg-preview.png" alt="Logotipo Oficial Efímero">
+            </div>
+
+            <div class="columna-logo-texto">
+                
+                <div class="tarjeta tarjeta-concepto">
+                    <h3>🧬 El Ajolote</h3>
+                    <p>Figura central de nuestra marca[cite: 256]. Es un símbolo biológico representativo de México profundamente conectado con los ecosistemas acuáticos[cite: 257]. Representa la biodiversidad, la adaptación y la urgencia de preservar el entorno natural[cite: 258].</p>
+                </div>
+
+                <div class="tarjeta tarjeta-concepto">
+                    <h3>🔄 Estructura Circular</h3>
+                    <p>El círculo que envuelve al ajolote evoca continuidad, equilibrio y el ciclo de vida. Está directamente alineado con la filosofía de la sostenibilidad y el cuidado activo de nuestro hogar, la Tierra[cite: 265].</p>
+                </div>
+
+                <div class="tarjeta tarjeta-concepto">
+                    <h3>⚫ Simplicidad en Blanco y Negro</h3>
+                    <p>Un contraste elegante diseñado para transmitir claridad. El negro proyecta la solidez y formalidad de nuestro compromiso con las prácticas responsables [cite: 262]; el fondo representa la pureza y el respeto ambiental[cite: 262].</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section class="cta-section">
         <h2>Disfruta tu bebida, cuida el planeta</h2>
         <p>¿Tienes una cafetería, negocio escolar o evento cercano en Toluca? Haz tu pedido directamente con nosotros.</p>
         
-        <a href="https://wa.me/5217208088019?text=Hola%20Equipo%20Efímero,%20me%20interesa%20conocer%20más%20sobre%20sus%20vasos%20biodegradables." target="_blank" class="btn-whatsapp">
+        <a href="https://wa.me/5217208088019?text=Hola%20Equipo%20Efímero,%20me%20interesa%20conecer%20más%20sobre%20sus%20vasos%20biodegradables." target="_blank" class="btn-whatsapp">
             📲 ¡Haz tu pedido por WhatsApp!
         </a>
     </section>
