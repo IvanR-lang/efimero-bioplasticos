@@ -128,7 +128,27 @@
             border-radius: 2px;
         }
 
-        .grid-ingredientes {
+        /* NUEVO: Estilos para el Contador de Impacto */
+        .grid-impacto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            margin-top: -2rem;
+        }
+        .numero-impacto {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--verde-oscuro);
+            margin-bottom: 0.5rem;
+        }
+        .texto-impacto {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .grid-ingredientes, .grid-equipo {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2.5rem;
@@ -174,6 +194,36 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        /* NUEVO: Línea de tiempo de Proceso */
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            position: relative;
+        }
+        .timeline-paso {
+            flex: 1;
+            min-width: 250px;
+            background: var(--blanco);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px dashed var(--verde-claro);
+            text-align: left;
+        }
+        .num-paso {
+            background: var(--verde-oscuro);
+            color: var(--blanco);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
         }
 
         .video-container {
@@ -340,7 +390,6 @@
             gap: 2rem;
         }
 
-        /* NUEVO: Estilos para la sección de "Conoce el Logo" */
         .contenedor-logo-concepto {
             display: flex;
             align-items: center;
@@ -380,7 +429,6 @@
 
         .tarjeta-concepto {
             background-color: var(--blanco);
-            border-left: 4px stroke var(--verde-oscuro);
             border: 1px solid #eee;
             border-left: 4px solid var(--verde-oscuro);
             padding: 1.5rem;
@@ -401,6 +449,39 @@
             font-size: 1.15rem;
             margin-bottom: 0.5rem;
         }
+
+        /* NUEVO: Mosaico Stand / Galería */
+        .galeria-stand {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .foto-stand {
+            flex: 1;
+            min-width: 280px;
+            background: linear-gradient(135deg, #fff 0%, var(--beige) 100%);
+            border: 2px solid var(--blanco);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+
+        /* NUEVO: Reseñas Premium */
+        .grid-resenas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .resena-card {
+            background: var(--verde-suave);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: left;
+            border: 1px solid #e2e8f0;
+        }
+        .estrellas { color: #ffb300; margin-bottom: 0.5rem; font-size: 1.2rem; }
 
         .cta-section {
             background-color: var(--verde-oscuro);
@@ -463,10 +544,20 @@
         </div>
     </section>
 
-    <section class="seccion" style="background-color: #fafafa;">
-        <h2 class="titulo-seccion">Conoce Nuestra Propuesta</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/aN1JtKlmfpM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <section class="seccion" style="border-bottom: 1px solid #f0f0f0;">
+        <div class="grid-impacto">
+            <div>
+                <div class="numero-impacto">+10k</div>
+                <div class="texto-impacto">Vasos de plástico evitados</div>
+            </div>
+            <div>
+                <div class="numero-impacto">5 Meses</div>
+                <div class="texto-impacto">Biodegradación Completa</div>
+            </div>
+            <div>
+                <div class="numero-impacto">100%</div>
+                <div class="texto-impacto">Materiales Orgánicos</div>
+            </div>
         </div>
     </section>
 
@@ -488,6 +579,34 @@
                 <h3>Flores Naturales</h3>
                 <p>Pigmentos orgánicos extraídos directamente de la naturaleza para darle colores vibrantes sin químicos sintéticos.</p>
             </div>
+        </div>
+    </section>
+
+    <section class="seccion" style="background-color: #fafafa;">
+        <h2 class="titulo-seccion">El Proceso de Creación</h2>
+        <div class="timeline">
+            <div class="timeline-paso">
+                <div class="num-paso">1</div>
+                <h3>Selección</h3>
+                <p>Medimos rigurosamente la grenetina y glicerina de origen vegetal para lograr la densidad exacta.</p>
+            </div>
+            <div class="timeline-paso">
+                <div class="num-paso">2</div>
+                <h3>Infusión de Color</h3>
+                <p>Extraemos pigmentos naturales de flores seleccionadas para dar un look único sin usar colorantes tóxicos.</p>
+            </div>
+            <div class="timeline-paso">
+                <div class="num-paso">3</div>
+                <h3>Moldeado y Curado</h3>
+                <p>Vertemos la mezcla en moldes especiales donde se controla el secado para garantizar su máxima firmeza.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion">
+        <h2 class="titulo-seccion">Conoce Nuestra Propuesta</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/aN1JtKlmfpM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -517,98 +636,114 @@
     <section class="seccion">
         <h2 class="titulo-seccion">Preguntas Frecuentes</h2>
         <div class="faq-container">
-            
             <div class="faq-item">
                 <div class="faq-pregunta">¿Cuánto tiempo tarda realmente en degradarse?</div>
                 <div class="faq-respuesta">
                     A diferencia del plástico tradicional que toma hasta 500 años, nuestro vaso de bioplástico se descompone en condiciones de compostaje industrial en un periodo de pocos meses, convirtiéndose en nutrientes orgánicos que regresan a la tierra de forma natural.
                 </div>
             </div>
-
             <div class="faq-item">
                 <div class="faq-pregunta">¿Son seguros para consumir cualquier bebida?</div>
                 <div class="faq-respuesta">
                     ¡Completamente seguros! Están elaborados a base de materias primas naturales como grenetina, glicerina vegetal, agua y pigmentos extraídos de flores. Son 100% libres de químicos dañinos, toxinas o polímeros sintéticos derivados del petróleo.
                 </div>
             </div>
-
             <div class="faq-item">
                 <div class="faq-pregunta">¿Cómo nace el proyecto Efímero?</div>
                 <div class="faq-respuesta">
                     Somos un equipo de estudiantes emprendedores. Al observar el uso excesivo de vasos desechables de un solo uso dentro de nuestra comunidad escolar y los residuos generados en el Valle de Toluca, decidimos proponer una solución realista que reduzca la contaminación ambiental.
                 </div>
             </div>
-
         </div>
     </section>
 
     <section class="seccion" style="background-color: #fafafa;">
+        <h2 class="titulo-seccion">Nuestra Experiencia Física</h2>
+        <div class="galeria-stand">
+            <div class="foto-stand">
+                <span style="font-size: 3rem;">🪵</span>
+                <h3 style="color: var(--verde-oscuro); margin: 1rem 0 0.5rem;">Diseño Orgánico</h3>
+                <p style="color: #666; font-size: 0.9rem;">Estructura minimalista de madera clara que refleja calidez, honestidad y cercanía con la naturaleza.</p>
+            </div>
+            <div class="foto-stand">
+                <span style="font-size: 3rem;">🌿</span>
+                <h3 style="color: var(--verde-oscuro); margin: 1rem 0 0.5rem;">Ambiente Sustentable</h3>
+                <p style="color: #666; font-size: 0.9rem;">Señalética clara integrada con plantas naturales colgantes para dar frescura y coherencia ecológica.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion">
         <h2 class="titulo-seccion">El Equipo Detrás del Cambio</h2>
         <div class="grid-equipo">
-            
             <div class="tarjeta">
                 <div class="tarjeta-icono">👨‍com</div>
                 <h3>Erick Ivan Cortes Reyes</h3>
                 <h4>Estrategia Comercial</h4>
                 <p>Coordinación integral del proyecto, planeación del modelo de negocios y gestión de canales de distribución.</p>
             </div>
-
             <div class="tarjeta">
                 <div class="tarjeta-icono">👨‍🔧</div>
                 <h3>Emmanuel Corral Vallejo</h3>
                 <h4>Control de Calidad</h4>
                 <p>Supervisión del proceso de producción, cuidado de la mezcla de bioplástico y resistencia de los vasos.</p>
             </div>
-
             <div class="tarjeta">
                 <div class="tarjeta-icono">👩‍💼</div>
                 <h3>Fabiola Sarai Delgado Alonso</h3>
                 <h4>Gestión Financiera</h4>
                 <p>Administración del presupuesto del equipo, análisis de costos de materiales y balance de utilidades.</p>
             </div>
-
             <div class="tarjeta">
                 <div class="tarjeta-icono">👨‍🎨</div>
                 <h3>Alan Josue Escamilla Morales</h3>
                 <h4>Identidad Creativa</h4>
                 <p>Desarrollo de la imagen de marca, diseño del logotipo del ajolote, slogan y comunicación digital.</p>
             </div>
-
             <div class="tarjeta">
                 <div class="tarjeta-icono">👨‍🤝‍👨</div>
                 <h3>Eduardo Reyes Fabian</h3>
                 <h4>Relaciones Públicas</h4>
                 <p>Logística externa, vinculación con pequeños negocios y atención directa a los aliados comerciales.</p>
             </div>
+        </div>
+    </section>
 
+    <section class="seccion" style="background-color: #fafafa;">
+        <h2 class="titulo-seccion">Identidad Efímero</h2>
+        <div class="contenedor-logo-concepto">
+            <div class="columna-logo-visual">
+                <img src="./logo-ajolote-removebg-preview.png" alt="Logotipo Oficial Efímero">
+            </div>
+            <div class="columna-logo-texto">
+                <div class="tarjeta tarjeta-concepto">
+                    <h3>🧬 El Ajolote</h3>
+                    <p>Figura central de nuestra marca. Es un símbolo biológico representativo de México profundamente conectado con los ecosistemas acuáticos. Representa la biodiversidad, la adaptación y la urgencia de preservar el entorno natural.</p>
+                </div>
+                <div class="tarjeta tarjeta-concepto">
+                    <h3>🔄 Estructura Circular</h3>
+                    <p>El círculo que envuelve al ajolote evoca continuidad, equilibrio y el ciclo de vida. Está directamente alineado con la filosofía de la sostenibilidad y el cuidado activo de nuestro hogar, la Tierra.</p>
+                </div>
+                <div class="tarjeta tarjeta-concepto">
+                    <h3>⚫ Simplicidad en Blanco y Negro</h3>
+                    <p>Un contraste elegante diseñado para transmitir claridad. El negro proyecta la solidez y formalidad de nuestro compromiso con las prácticas responsables; el fondo representa la pureza y el respeto ambiental.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="seccion">
-        <h2 class="titulo-seccion">Identidad Efímero</h2>
-        <div class="contenedor-logo-concepto">
-            
-            <div class="columna-logo-visual">
-                <img src="./logo-ajolote-removebg-preview.png" alt="Logotipo Oficial Efímero">
+        <h2 class="titulo-seccion">Lo que dicen de efímero</h2>
+        <div class="grid-resenas">
+            <div class="resena-card">
+                <div class="estrellas">★★★★★</div>
+                <p style="font-style: italic; color: #444; margin-bottom: 1rem;">"Los implementamos en los eventos de nuestra barra de jugos y la respuesta fue increíble. Los clientes aprecian ver el logo del ajolote y saber que no dañan el entorno local."</p>
+                <strong>– Distribuidor Local de Bebidas</strong>
             </div>
-
-            <div class="columna-logo-texto">
-                
-                <div class="tarjeta tarjeta-concepto">
-                    <h3>🧬 El Ajolote</h3>
-                    <p>Figura central de nuestra marca[cite: 256]. Es un símbolo biológico representativo de México profundamente conectado con los ecosistemas acuáticos[cite: 257]. Representa la biodiversidad, la adaptación y la urgencia de preservar el entorno natural[cite: 258].</p>
-                </div>
-
-                <div class="tarjeta tarjeta-concepto">
-                    <h3>🔄 Estructura Circular</h3>
-                    <p>El círculo que envuelve al ajolote evoca continuidad, equilibrio y el ciclo de vida. Está directamente alineado con la filosofía de la sostenibilidad y el cuidado activo de nuestro hogar, la Tierra[cite: 265].</p>
-                </div>
-
-                <div class="tarjeta tarjeta-concepto">
-                    <h3>⚫ Simplicidad en Blanco y Negro</h3>
-                    <p>Un contraste elegante diseñado para transmitir claridad. El negro proyecta la solidez y formalidad de nuestro compromiso con las prácticas responsables [cite: 262]; el fondo representa la pureza y el respeto ambiental[cite: 262].</p>
-                </div>
-
+            <div class="resena-card">
+                <div class="estrellas">★★★★★</div>
+                <p style="font-style: italic; color: #444; margin-bottom: 1rem;">"Buscaba una opción estética y económica para mi cafetería escolar sin tener que recurrir al unicel de siempre. El precio de $7 es súper accesible y el diseño es hermoso."</p>
+                <strong>– Emprendedora Escolar</strong>
             </div>
         </div>
     </section>
@@ -616,8 +751,7 @@
     <section class="cta-section">
         <h2>Disfruta tu bebida, cuida el planeta</h2>
         <p>¿Tienes una cafetería, negocio escolar o evento cercano en Toluca? Haz tu pedido directamente con nosotros.</p>
-        
-        <a href="https://wa.me/5217208088019?text=Hola%20Equipo%20Efímero,%20me%20interesa%20conecer%20más%20sobre%20sus%20vasos%20biodegradables." target="_blank" class="btn-whatsapp">
+        <a href="https://wa.me/5217208088019?text=Hola%20Equipo%20Efímero,%20me%20interesa%20conocer%20más%20sobre%20sus%20vasos%20biodegradables." target="_blank" class="btn-whatsapp">
             📲 ¡Haz tu pedido por WhatsApp!
         </a>
     </section>
