@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
         actualizarSimulador(0);
     }
 
-    // 2. DETECTAR SECCIÓN ACTIVA AL SCROLLEAR (Con las 6 pestañas mapeadas)
+    // 2. DETECTAR SECCIÓN ACTIVA AL SCROLLEAR (Con la pestaña Concepto integrada)
     const secciones = document.querySelectorAll('.seccion-bloque');
     const enlacesMenu = document.querySelectorAll('nav a');
 
