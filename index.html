@@ -64,7 +64,7 @@
 
         .hero {
             background: linear-gradient(135deg, var(--verde-suave) 0%, var(--beige) 100%);
-            padding: 5rem 2rem;
+            padding: 6rem 2rem;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -73,15 +73,15 @@
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: var(--verde-oscuro);
             margin-bottom: 1rem;
         }
 
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             color: #555;
-            max-width: 600px;
+            max-width: 700px;
             margin-bottom: 2rem;
             font-style: italic;
         }
@@ -97,23 +97,24 @@
         .badge {
             background-color: var(--verde-oscuro);
             color: var(--blanco);
-            padding: 0.5rem 1rem;
+            padding: 0.6rem 1.2rem;
             border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .seccion {
-            padding: 5rem 2rem;
+            padding: 6rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .titulo-seccion {
             text-align: center;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             color: var(--verde-oscuro);
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
             position: relative;
         }
 
@@ -121,9 +122,10 @@
             content: '';
             display: block;
             width: 60px;
-            height: 3px;
+            height: 4px;
             background-color: var(--verde-claro);
             margin: 10px auto 0;
+            border-radius: 2px;
         }
 
         .grid-ingredientes {
@@ -163,6 +165,27 @@
             color: var(--verde-oscuro);
             margin-bottom: 1rem;
             font-size: 1.4rem;
+        }
+
+        /* Video Comercial Section */
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            background-color: #000;
+            position: relative;
+            padding-top: 56.25%; /* Relación de aspecto 16:9 */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
         .simulador-container {
@@ -245,15 +268,74 @@
             border-radius: 0 0 10px 10px;
         }
 
+        /* Preguntas Frecuentes (FAQ) Estilos Acordeón */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--blanco);
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-pregunta {
+            padding: 1.25rem 1.5rem;
+            font-weight: bold;
+            color: var(--verde-oscuro);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            background-color: #fff;
+        }
+
+        .faq-pregunta:hover {
+            background-color: var(--verde-suave);
+        }
+
+        .faq-pregunta::after {
+            content: '▼';
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+            color: var(--verde-claro);
+        }
+
+        .faq-item.activo .faq-pregunta::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-respuesta {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            padding: 0 1.5rem;
+            background-color: #fafafa;
+            color: #555;
+            font-size: 0.95rem;
+            border-top: 0 solid #e2e8f0;
+        }
+
+        .faq-item.activo .faq-respuesta {
+            max-height: 200px; /* Altura máxima adaptativa */
+            padding: 1.25rem 1.5rem;
+            border-top-width: 1px;
+        }
+
         .cta-section {
             background-color: var(--verde-oscuro);
             color: var(--blanco);
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
         }
 
         .cta-section h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 1rem;
         }
 
@@ -261,18 +343,19 @@
             display: inline-block;
             background-color: #25d366;
             color: white;
-            padding: 1rem 2.5rem;
+            padding: 1.1rem 3rem;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             margin-top: 1.5rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .btn-whatsapp:hover {
             transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
 
         footer {
@@ -313,6 +396,13 @@
         </div>
     </section>
 
+    <section class="seccion" style="background-color: #fafafa;">
+        <h2 class="titulo-seccion">Conoce Nuestra Propuesta</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/aN1JtKlmfpM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
     <section class="seccion">
         <h2 class="titulo-seccion">¿De qué está hecho?</h2>
         <div class="grid-ingredientes">
@@ -336,7 +426,6 @@
 
     <section class="seccion" style="background-color: #fafafa;">
         <h2 class="titulo-seccion">Simulador de Biodegradación</h2>
-        
         <div class="simulador-container">
             <div class="controles-simulador">
                 <input type="range" min="0" max="100" value="0" class="slider" id="selectorTiempo">
@@ -358,10 +447,41 @@
         </div>
     </section>
 
+    <section class="seccion">
+        <h2 class="titulo-seccion">Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            
+            <div class="faq-item">
+                <div class="faq-pregunta">¿Cuánto tiempo tarda realmente en degradarse?</div>
+                <div class="faq-respuesta">
+                    A diferencia del plástico tradicional que toma hasta 500 años, nuestro vaso de bioplástico se descompone en condiciones de compostaje industrial en un periodo de pocos meses, convirtiéndose en nutrientes orgánicos que regresan a la tierra de forma natural.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-pregunta">¿Son seguros para consumir cualquier bebida?</div>
+                <div class="faq-respuesta">
+                    ¡Completamente seguros! Están elaborados a base de materias primas naturales como grenetina, glicerina vegetal, agua y pigmentos extraídos de flores. Son 100% libres de químicos dañinos, toxinas o polímeros sintéticos derivados del petróleo.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-pregunta">¿Cómo nace el proyecto Efímero?</div>
+                <div class="faq-respuesta">
+                    Somos un equipo de estudiantes emprendedores. Al observar el uso excesivo de vasos desechables de un solo uso dentro de nuestra comunidad escolar y los residuos generados en el Valle de Toluca, decidimos proponer una solución realista que reduzca la contaminación ambiental.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <section class="cta-section">
         <h2>Disfruta tu bebida, cuida el planeta</h2>
         <p>¿Tienes una cafetería, negocio escolar o evento cercano en Toluca? Haz tu pedido directamente con nosotros.</p>
-        <a href="https://wa.me/#" target="_blank" class="btn-whatsapp">¡Haz tu pedido por WhatsApp!</a>
+        
+        <a href="https://wa.me/5217220000000?text=Hola%20Equipo%20Efímero,%20me%20interesa%20conocer%20más%20sobre%20sus%20vasos%20biodegradables." target="_blank" class="btn-whatsapp">
+            📲 ¡Haz tu pedido por WhatsApp!
+        </a>
     </section>
 
     <footer>
