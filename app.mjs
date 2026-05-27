@@ -1,16 +1,13 @@
-// Esperar a que el HTML esté completamente cargado en el navegador para evitar errores
 window.addEventListener('DOMContentLoaded', () => {
 
-    // =========================================================================
-    // 1. SIMULADOR DINÁMICO DE BIODEGRADACIÓN
-    // =========================================================================
+    // 1. SIMULADOR DE BIODEGRADACIÓN
     const selectorTiempo = document.getElementById('selectorTiempo');
     const etiquetaTiempo = document.getElementById('etiquetaTiempo');
     const vasoEfimero = document.getElementById('vasoEfimero');
     const estadoEfimero = document.getElementById('estadoEfimero');
 
     function actualizarSimulador(valor) {
-        if (!selectorTiempo) return; // Protección por si no existen los elementos
+        if (!selectorTiempo) return;
         
         if (valor == 0) {
             etiquetaTiempo.innerText = "Día 1 (Recién desechado)";
@@ -36,9 +33,9 @@ window.addEventListener('DOMContentLoaded', () => {
         else if (valor > 66 && valor < 100) {
             etiquetaTiempo.innerText = "Mes 5 (Integración al suelo)";
             estadoEfimero.innerText = "La glicerina y grenetina se degradan casi al 100%, volviendo a la tierra.";
-            vasoEfimero.style.transform = "scale(0.2) translateY(50px)";
+            vasoEfimero.style.transform = "scale(0.2) translateY(35px)";
             vasoEfimero.style.opacity = "0.1";
-            vasoEfimero.style.filter = "blur(3px)";
+            vasoEfimero.style.filter = "blur(2px)";
         } 
         else if (valor == 100) {
             etiquetaTiempo.innerText = "¡Pocos meses después! (Economía Circular)";
@@ -49,53 +46,29 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     if (selectorTiempo) {
-        selectorTiempo.addEventListener('input', (e) => {
-            actualizarSimulador(e.target.value);
-        });
-        // Forzar estado inicial
+        selectorTiempo.addEventListener('input', (e) => actualizarSimulador(e.target.value));
         actualizarSimulador(0);
     }
 
+    // 2. DETECTAR SECCIÓN ACTIVA AL SCROLLEAR (Con las 6 pestañas mapeadas)
+    const secciones = document.querySelectorAll('.seccion-bloque');
+    const enlacesMenu = document.querySelectorAll('nav a');
 
-    // =========================================================================
-    // 2. ANIMACIÓN DE APARICIÓN SUAVE (SCROLL REVEAL)
-    // =========================================================================
-    const tarjetas = document.querySelectorAll('.tarjeta');
-    
-    const verificarTarjetasScroll = () => {
-        const triggerBottom = window.innerHeight * 0.85;
-        tarjetas.forEach(tarjeta => {
-            const tarjetaTop = tarjeta.getBoundingClientRect().top;
-            if (tarjetaTop < triggerBottom) {
-                tarjeta.classList.add('visible');
+    window.addEventListener('scroll', () => {
+        let seccionActual = "";
+        
+        secciones.forEach(seccion => {
+            const seccionTop = seccion.offsetTop;
+            if (pageYOffset >= seccionTop - 160) {
+                seccionActual = seccion.getAttribute('id');
             }
         });
-    };
 
-    window.addEventListener('scroll', verificarTarjetasScroll);
-    verificarTarjetasScroll(); // Ejecución inicial
-
-
-    // =========================================================================
-    // 3. INTERACTIVIDAD DE PREGUNTAS FRECUENTES (FAQ ACORDEÓN)
-    // =========================================================================
-    const itemsFaq = document.querySelectorAll('.faq-item');
-
-    itemsFaq.forEach(item => {
-        const pregunta = item.querySelector('.faq-pregunta');
-        
-        if (pregunta) {
-            pregunta.addEventListener('click', () => {
-                const estaActivo = item.classList.contains('activo');
-                
-                // Cierra los otros por estética, para que solo haya uno abierto a la vez
-                itemsFaq.forEach(i => i.classList.remove('activo'));
-                
-                // Si no estaba abierto, lo abre
-                if (!estaActivo) {
-                    item.classList.add('activo');
-                }
-            });
-        }
+        enlacesMenu.forEach(enlace => {
+            enlace.classList.remove('active');
+            if (enlace.getAttribute('href') === `#${seccionActual}`) {
+                enlace.classList.add('active');
+            }
+        });
     });
 });
